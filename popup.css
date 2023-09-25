@@ -1,0 +1,113 @@
+body {
+	width: 430px;
+    height: 520px;
+    text-align: center;
+    background-color: #fee0ff;
+    display: flex;
+    align-items: center;
+    flex-flow: column;
+}
+h1, h3 {
+    color: #131313da;
+}
+h1 {
+    margin-top: 50px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    font-size: 32px;
+}
+h3 {
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 15px;
+}
+span {
+    font-size: 20px;
+}
+p {
+    margin: 10px;
+    padding: 10px;
+    background-color: #feffc0;
+    border-radius: 5px;
+}
+a {
+    text-decoration: none;
+    color: #0051ff;
+}
+a:hover {
+    color: #ff5500;
+}
+.sms-link, .ai-link{
+    color: #008d23;
+}
+#showSpreadSheet {
+    padding: 20px 10px;
+    background-color: #feffc0c0;
+    border-radius: 10px;
+    color: #555555;
+}
+.function-title {
+    font-weight: bold;
+}
+.button-wrapper {
+    width: 80%;
+    height: auto;
+    padding: 30px;
+    margin: 20px 0 0 0;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 40px;
+}
+button {
+    height: 80px;
+    width: 90%;
+    padding: 30px;
+    color: #ffffff;
+    outline: none;
+    border: none;
+    border-radius: 7px;
+    box-shadow: 0px 5px 2px -1px #00000080;
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.horizontal-buttons {
+    display: flex;
+    margin: 10px 0 15px 0;
+    height: fit-content;
+}
+.horizontal-buttons button {
+    margin: 7px;
+}
+button:active {
+    box-shadow: 0px 0px 0px 0px #00000080;
+    position: relative;
+    top: 5px
+}
+button img {
+    width: 30px;
+    margin-right: 20px;
+    vertical-align: center;
+}
+#extractVocabularyButton {
+    background-color: #00AA51;
+}
+#extractVocabularyButton:hover, #extractVocabularyButton:active {
+    background-color: #007712;
+}
+#extractDialogueButton {
+    background-color: #ff754b;
+}
+#extractDialogueButton:hover, #extractDialogueButton:active {
+    background-color: #96462e;
+}
+.footer-wrapper {
+    width: 90%;
+    margin: 30px 0 10px 0;
+    display: flex;
+    justify-content: center;
+}
