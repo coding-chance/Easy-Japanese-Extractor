@@ -93,17 +93,23 @@ button img {
     margin-right: 20px;
     vertical-align: center;
 }
-#extractVocabularyButton {
-    background-color: #00AA51;
-}
-#extractVocabularyButton:hover, #extractVocabularyButton:active {
-    background-color: #007712;
-}
 #extractDialogueButton {
-    background-color: #ff754b;
+    background-color: #80e7d1;
 }
 #extractDialogueButton:hover, #extractDialogueButton:active {
+    background-color: #477f73;
+}
+#extractVocabularyButton {
+    background-color: #ff754b;
+}
+#extractVocabularyButton:hover, #extractVocabularyButton:active {
     background-color: #96462e;
+}
+#extractScriptButton {
+    background-color: #27b53a;
+}
+#extractScriptButton:hover, #extractScriptButton:active {
+    background-color: #187024;
 }
 .footer-wrapper {
     width: 90%;
