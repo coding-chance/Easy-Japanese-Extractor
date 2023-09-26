@@ -26,7 +26,7 @@ function extractScripts() {
       // console.log(`Yomigana: ${yomigana}`);
       // console.log(`Definition: ${definition}`);
       vocabularyList.push(`${japanese} [${yomigana}]    ${definition}`.replaceAll(/\r?\n/g, '').replaceAll(/\t/g, ""));
-      vocabularyCsvOutputList.push(`${japanese},${yomigana},${definition}`);
+      vocabularyCsvOutputList.push(`${japanese},${yomigana.replace(/,/g, ";")},${definition.replace(/,/g, ";")}`.replaceAll(/\r?\n/g, '').replaceAll(/\t/g, ""));
     }
   }
   let vocabularyString = vocabularyList.join("\n");
@@ -48,7 +48,8 @@ function extractScripts() {
 
   // Save as txt
   let lessonNumber = document.getElementById("tab-title").innerHTML.split("</span>")[1];
-  let fileName = `#${lessonNumber}-script_nhk-jp-grammar.txt`
+  let pageLang = location.href.split("/")[4];
+  let fileName = `#${lessonNumber}-script_nhk-japanese-${pageLang}-grammar.txt`
   let blob = new Blob([vocabularyString], { type: 'text/plain' });
   let aTag = document.createElement('a');
   aTag.href = URL.createObjectURL(blob);
@@ -63,7 +64,7 @@ function extractScripts() {
   aTag = document.createElement('a');
   aTag.href = URL.createObjectURL(blob);
   aTag.target = '_blank';
-  fileName = `#${lessonNumber}-script_nhk-jp-grammar.csv`
+  fileName = `#${lessonNumber}-script_nhk-japanese-${pageLang}-grammar.csv`
   aTag.download = fileName;
   aTag.click();
   URL.revokeObjectURL(aTag.href);
