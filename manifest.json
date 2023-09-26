@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Words Extractor for NHK Easy Japanse Conversation lessons",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Extract words and phrases and save them into the clipbaord",
   "permissions": ["activeTab", "scripting"],
   "action": {
@@ -11,11 +11,12 @@
   "content_scripts": [
     {
       "matches": ["https://www.nhk.or.jp/*"],
-      "js": ["content.js"]
+      "js": ["js/content.js"]
     }
   ],
   "background": {
-    "service_worker": "background.js"
+    "service_worker": "js/background.js",
+    "type": "module"
   },
   "icons": {
     "16": "/images/zoom-32.png",
@@ -23,12 +24,21 @@
     "128": "/images/zoom-128.png"
   },
   "commands": {
-    "send-continue-message": {
+    "_extract_dialogues": {
       "suggested_key": {
-        "default": "Shift+Ctrl+E",
-        "mac": "MacCtrl+Shift+E"
+        "default": "Ctrl+Shift+E",
+        "mac": "MacCtrl+Shift+E",
+        "linux": "Ctrl+Shift+E"
       },
-      "description": "Extract words and phrases and save them into the clipbaord"
+      "description": "Extract dialogues"
+    },
+    "_extract_vocabulary": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+Y",
+        "mac": "MacCtrl+Shift+Y",
+        "linux": "Ctrl+Shift+Y"
+      },
+      "description": "Extract vocabulary"
     }
   }
 }
