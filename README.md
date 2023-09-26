@@ -20,3 +20,16 @@ All you have to do is to visit the [page of Japanese Conversation lessons](https
 
 ## for those who learn Japanese
 I actually am a professional Japanese coach who helped hundreds of people who wanted to acquire Japanese as a second language. If you'd like to learn Japanse efficiently or master advanced Japanese as quickly as possible, feel free to contact me by sending DM to [ X Account ( used to be called 'twitter') ](https://twitter.com/Koki33621949) or [sending an email](koki.kusuhara.business@gmail.com). I look forward to sharing all the techniques and wonderful learning experience with you.
+
+
+## Trouble Shooting
+Sometimes, you might fail to copy extracted data to clipboard and see an error message like this below. 
+<br>
+
+`Failed to copy vocabulary to clipboard. Check console on your browser.`
+
+<br>
+
+When you see this error, the extracted data is not copied to the clipboard so you can't paste it immediately. Although you can pick up the extracted data from downloaded file in `Download` folder, but this is a bit inconvienient.
+
+You can fix this problem by restarting chrome browser. If the problem persists after restarting your browser, let me know by [sending me an issue](https://github.com/coding-chance/Easy-Japanese-Extractor/issues) on github
