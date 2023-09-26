@@ -12,7 +12,7 @@ This is chrome extension that extracts words and phrases from a web page called 
 
 
 ## Usage
-All you have to do is to visit the [lesson page of Japanese course of NHK](https://www.nhk.or.jp/lesson/fr/lessons/01.html) and click on the icon displayed on top right. You can choose either `Dialogue` or `vocabulary`. Extracted words will be stored into clipboard line by line so you can paste it to Quizlet to register them as a list of vocabulary. After importing the vocabulary to Quizlet, you can review the words anytime, anywhere on your smartphone.
+All you have to do is to visit the [page of Japanese Conversation lessons](https://www.nhk.or.jp/lesson/en/lessons/01.html) and click on the icon displayed on top right. You can choose either `Dialogue` or `vocabulary`. Extracted words will be stored into clipboard line by line so you can paste it to Quizlet to register them as a list of vocabulary. After importing the vocabulary to Quizlet, you can review the words anytime, anywhere on your smartphone.
 
 
 ## for those who learn Japanese
