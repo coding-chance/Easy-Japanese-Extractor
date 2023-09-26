@@ -26,7 +26,7 @@ function extractScripts() {
       // console.log(`Yomigana: ${yomigana}`);
       // console.log(`Definition: ${definition}`);
       vocabularyList.push(`${japanese} [${yomigana}]    ${definition}`.replaceAll(/\r?\n/g, '').replaceAll(/\t/g, ""));
-      vocabularyCsvOutputList.push(`${japanese},${yomigana},${definition}`.replaceAll(/\r?\n/g, '').replaceAll(/\t/g, ""));
+      vocabularyCsvOutputList.push(`${japanese},${yomigana.replace(/,/g, ";")},${definition.replace(/,/g, ";")}`.replaceAll(/\r?\n/g, '').replaceAll(/\t/g, ""));
     }
   }
   let vocabularyString = vocabularyList.join("\n");

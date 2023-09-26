@@ -20,7 +20,7 @@ function extractVocabulary() {
             strings.push(text);
         }
         vocabularyList.push(`${strings[0]} [ ${strings[1]} ]    ${strings[2]}`);
-        vocabularyCsvOutputList.push(`${strings[0]},${strings[1]},${strings[2]}`);
+        vocabularyCsvOutputList.push(`${strings[0]},${strings[1].replace(/,/g, ";")},${strings[2].replace(/,/g, ";")}`);
     })
     let vocabularyString = vocabularyList.join("\n");
     let vocabularyCsvString = vocabularyCsvOutputList.join("\n");
