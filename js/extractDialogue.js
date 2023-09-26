@@ -39,7 +39,7 @@ function extractDialogue() {
     }
   }
   alert("Turn off the extension pop-up. \n(Click anywhere on the page body to disable the pop-up)")
-  copyToClip(vocabularyString);
+  setTimeout(() => { copyToClip(vocabularyString) }, 500);
 
   // Save as txt
   let blob = new Blob([vocabularyString], { type: 'text/plain' });
@@ -63,7 +63,7 @@ function extractDialogue() {
   aTag.click();
   URL.revokeObjectURL(aTag.href);
 
-  
+
 }
 
 

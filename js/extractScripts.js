@@ -29,9 +29,9 @@ function extractScripts() {
       vocabularyCsvOutputList.push(`${japanese},${yomigana},${definition}`);
     }
   }
-  console.log(vocabularyList);
   let vocabularyString = vocabularyList.join("\n");
   let vocabularyCsvString = vocabularyCsvOutputList.join("\n");
+  console.log(vocabularyString);
 
   // Save to clipboard
   const copyToClip = async (vocabularyString) => {
@@ -44,7 +44,7 @@ function extractScripts() {
     }
   }
   alert("Turn off the extension pop-up. \n(Click anywhere on the page body to disable the pop-up)")
-  copyToClip(vocabularyString);
+  setTimeout(() => { copyToClip(vocabularyString) }, 500);
 
   // Save as txt
   let lessonNumber = document.getElementById("tab-title").innerHTML.split("</span>")[1];
