@@ -44,7 +44,8 @@ function extractVocabulary() {
     aTag.href = URL.createObjectURL(blob);
     aTag.target = '_blank';
     let lessonNumber = document.querySelector(".cando-block .num").innerText;
-    let fileName = `${lessonNumber}-vocabulary_nhk-jp-conversation.txt`
+    let pageLang = location.href.split("/")[4];
+    let fileName = `${lessonNumber}-vocabulary_nhk-japanese-${pageLang}-conversation.txt`
     aTag.download = fileName;
     aTag.click();
     URL.revokeObjectURL(aTag.href);
@@ -55,7 +56,7 @@ function extractVocabulary() {
     aTag = document.createElement('a');
     aTag.href = URL.createObjectURL(blob);
     aTag.target = '_blank';
-    fileName = `${lessonNumber}-vocabulary_nhk-jp-conversation.csv`
+    fileName = `${lessonNumber}-vocabulary_nhk-japanese-${pageLang}-conversation.csv`
     aTag.download = fileName;
     aTag.click();
     URL.revokeObjectURL(aTag.href);
