@@ -94,10 +94,10 @@ button img {
     vertical-align: center;
 }
 #extractDialogueButton {
-    background-color: #80e7d1;
+    background-color: #00e3b2;
 }
 #extractDialogueButton:hover, #extractDialogueButton:active {
-    background-color: #477f73;
+    background-color: #00886b;
 }
 #extractVocabularyButton {
     background-color: #ff754b;
@@ -116,4 +116,8 @@ button img {
     margin: 30px 0 10px 0;
     display: flex;
     justify-content: center;
+}
+.title-category {
+    font-size: 15px;
+    margin-left: 12px;
 }
