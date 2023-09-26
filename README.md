@@ -32,4 +32,4 @@ Sometimes, you might fail to copy extracted data to clipboard and see an error m
 
 When you see this error, the extracted data is not copied to the clipboard so you can't paste it immediately. Although you can pick up the extracted data from downloaded file in `Download` folder, but this is a bit inconvienient.
 
-You can fix this problem by restarting chrome browser. If the problem persists after restarting your browser, let me know by [sending me an issue](https://github.com/coding-chance/Easy-Japanese-Extractor/issues) on github
+One of the users reported me that you can fix this problem by restarting chrome browser. Another user reported that when you click the page many times quickly right after pressing "OK" on the dialogue message, you are likely to succeed in having the data on the clipboard. If the problem persists, let me know details of the problem by [sending me an issue](https://github.com/coding-chance/Easy-Japanese-Extractor/issues) on github
