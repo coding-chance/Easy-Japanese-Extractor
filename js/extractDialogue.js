@@ -22,6 +22,7 @@ function extractDialogue() {
       vocabularyList.push(`${strings[0]} [ ${strings[1]} ]    ${strings[2]}`);
   })
   let vocabularyString = vocabularyList.join("\n");
+  
   const copyToClip = async (vocabularyString) => {
     try {
       await navigator.clipboard.writeText(vocabularyString);
@@ -34,7 +35,19 @@ function extractDialogue() {
   }
   
   alert("Turn off the extension pop-up. \n(Click anywhere on the page body to disable the pop-up)")
-  setTimeout(() => { copyToClip(vocabularyString) }, 500)
+
+  // Save as txt and csv
+  const blob = new Blob([text], { type: 'text/plain' });
+  const aTag = document.createElement('a');
+  aTag.href = URL.createObjectURL(blob);
+  aTag.target = '_blank';
+  aTag.download = fileName;
+  aTag.click();
+  URL.revokeObjectURL(aTag.href);
+
+  // Save to clipboard
+  copyToClip(vocabularyString);
+
 }
 
 

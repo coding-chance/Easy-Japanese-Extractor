@@ -32,6 +32,6 @@ function extractVocabulary() {
     }
     
     alert("Turn off the extension pop-up. \n(Click anywhere on the page body to disable the pop-up)")
-    setTimeout(() => { copyToClip(vocabularyString) }, 500)
+    copyToClip(vocabularyString);
     
   }
