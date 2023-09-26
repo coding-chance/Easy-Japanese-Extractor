@@ -47,7 +47,7 @@ function extractDialogue() {
   let aTag = document.createElement('a');
   aTag.href = URL.createObjectURL(blob);
   aTag.target = '_blank';
-  let lessonNumber = document.querySelector(".cando-block .num").innerText;
+  let lessonNumber = location.href.split("/")[6].split(".html")[0]
   let pageLang = location.href.split("/")[4];
   let fileName = `${lessonNumber}-dialogue_nhk-japanese-${pageLang}-conversation.txt`
   aTag.download = fileName;
