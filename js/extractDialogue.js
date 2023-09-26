@@ -12,6 +12,7 @@ function extractDialogue() {
   let dialogueSection = document.getElementById("skit");
   let textBoxes = dialogueSection.querySelectorAll(".text-box");
   var vocabularyList = [];
+  var vocabularyCsvOutputList = [];
   textBoxes.forEach((element, index)=>{
       let dialoguePElements = element.getElementsByTagName("p");
       let strings = [];
@@ -20,9 +21,13 @@ function extractDialogue() {
           strings.push(text);
       }
       vocabularyList.push(`${strings[0]} [ ${strings[1]} ]    ${strings[2]}`);
+      vocabularyCsvOutputList.push(`${strings[0]},${strings[1]},${strings[2]}`);
   })
   let vocabularyString = vocabularyList.join("\n");
+  let vocabularyCsvString = vocabularyCsvOutputList.join("\n");
   
+
+  // Save to clipboard
   const copyToClip = async (vocabularyString) => {
     try {
       await navigator.clipboard.writeText(vocabularyString);
@@ -33,21 +38,32 @@ function extractDialogue() {
       alert('Failed to copy dialogue to clipboard. Check console on your browser.');
     }
   }
-  
   alert("Turn off the extension pop-up. \n(Click anywhere on the page body to disable the pop-up)")
+  copyToClip(vocabularyString);
 
-  // Save as txt and csv
-  const blob = new Blob([text], { type: 'text/plain' });
-  const aTag = document.createElement('a');
+  // Save as txt
+  let blob = new Blob([vocabularyString], { type: 'text/plain' });
+  let aTag = document.createElement('a');
   aTag.href = URL.createObjectURL(blob);
   aTag.target = '_blank';
+  let lessonNumber = document.querySelector(".cando-block .num").innerText;
+  let fileName = `${lessonNumber}-dialogue_nhk-jp-conversation.txt`
   aTag.download = fileName;
   aTag.click();
   URL.revokeObjectURL(aTag.href);
 
-  // Save to clipboard
-  copyToClip(vocabularyString);
+  // Save as csv
+  const bom = new Uint8Array([0xef, 0xbb, 0xbf]);
+  blob = new Blob([bom, vocabularyCsvString], { type: 'text/csv' });
+  aTag = document.createElement('a');
+  aTag.href = URL.createObjectURL(blob);
+  aTag.target = '_blank';
+  fileName = `${lessonNumber}-dialogue_nhk-jp-conversation.csv`
+  aTag.download = fileName;
+  aTag.click();
+  URL.revokeObjectURL(aTag.href);
 
+  
 }
 
 
