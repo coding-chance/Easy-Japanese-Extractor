@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Words Extractor for NHK Easy Japanse Conversation lessons",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Extract words and phrases and save them into the clipbaord",
   "permissions": ["activeTab", "scripting"],
   "action": {
