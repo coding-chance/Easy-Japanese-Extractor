@@ -1,6 +1,7 @@
 # Easy Japanese Extractor
 This is chrome extension that extracts words and phrases from a web page called [Easy Japanese lessons](https://www.nhk.or.jp/lesson/en/lessons) provided by NHK. After extracting words, this tool will automatically convert them to a specific format that can be imported to the application called [Quizlet](http://quizlet.com) so you can remember vocabulary efficiently.
 
+![court-list-top](https://github.com/coding-chance/Easy-Japanese-Extractor/blob/master/images/dialogue_easy-japanese-extractor.gif?raw=true)
 
 ## Installation
 1. Download the source code of this repository and unzip it on your computer
